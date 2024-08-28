@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="styles/stylesheet.css"/>
+    <!-- Comment script below if you want access to page refreshing and the inspector -->
+    <script src="scripts/event-prevents.js"></script>
+    <script src="scripts/webaudio-controls.js"></script>
+    <script src="scripts/network-hub.js"></script>
+    <script src="scripts/client.js"></script>
+    <script src="scripts/visualizer.js"></script>
+  </head>
+  <body onload="onLoad()">
+    <div id="interface">
+      <!--canvas id="visualizer"></canvas-->
+      <div id="heading">
+        <h1>gain.</h1>
+      </div>
+      <div id="control-panel" style="display: flex; flex-direction: column; align-items: center;">
+        <canvas id="visualizer"></canvas>
+        <h2 id="gain_value"> 0 </h2>
+        <coles-knob id="gain_knob" min="0" max="100"></coles-knob>
+        <button class="btn" onclick="SendTestBinaryData()" style="margin-top: 40px; margin-bottom: 10px;">Binary Test</button>
+        <button class="btn" onclick="SendTestMIDIData()">MIDI Test</button>
+        <div style="display: flex; width: 100px; margin: 10px;">
+          <button class="btn" onclick="SAMFUI(0)" style="border-top-right-radius: 0px;border-bottom-right-radius: 0px;"> S </button>
+          <button class="btn" onclick="SAMFUI(1)" style="border-radius: 0px;"> M </button>
+          <button class="btn" onclick="SAMFUI(2)" style="border-top-left-radius: 0px;border-bottom-left-radius: 0px;"> L </button>
+        </div>
+     </div>
+    <p style="font-family: 'MainFont'; color: grey; font-size: 10pt;"> Created by Cole P. Mangio </p>
+    </div>
+    
+    <!-- <input id="slider" type="range" onmousedown="BPCFUI(0)" oninput="SPVFUI(0, this.value/100.)" onmouseup="EPCFUI(0)"> -->
+    <div style="display: none;">
+      <!--progress id="meter"-->
+      <button onclick="SAMFUI(0)">Small GUI</button>
+      <button onclick="SAMFUI(1)">Medium GUI</button>
+      <button onclick="SAMFUI(2)">Large GUI</button>
+    </div>
+</html>

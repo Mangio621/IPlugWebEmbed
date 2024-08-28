@@ -1,0 +1,95 @@
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+h1 {
+  font-family: 'MainFont';
+  font-size: 64pt;
+  margin: 0px;
+  margin-top: 35px;
+}
+
+h2 {
+  font-family: 'MainFont';
+  font-weight: 100;
+  position: absolute;
+  z-index: 1;
+  font-size: 12pt;        
+  color: rgb(194, 202, 206);
+  pointer-events: none;
+  margin-top: 135px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+#gain_knob {
+  margin-top: 20px;
+  --diameter: 150px;
+  --notch-length: 75px;
+}
+  
+#gain_knob .knob-container {
+  background-color: rgb(241, 241, 241);
+  box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.233);
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+}
+
+#gain_knob .knob-notch {
+  background-color: rgb(63, 63, 63);
+  width: 2px;
+  border-radius: 100px;
+}
+
+#interface {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  height: 600px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.50); 
+}
+
+#visualizer {
+  position: absolute;
+  width: 350px;
+  height: 200px;
+}
+
+.btn {
+  cursor: pointer;
+  transition-duration: 0.2s;
+  font-family: 'MainFont';
+  background-color: transparent;
+  color: rgb(100, 100, 100); 
+  border-style: solid;
+  border-color: rgb(110, 110, 110);
+  border-width: 1px;
+  border-radius: 5px;
+  width: 100px;
+  height: 35px;
+}
+
+.btn:hover {
+  transition-duration: 0.2s;
+  transform: scale(1.05);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+  transition-duration: 0s;
+  transform: scale(0.9);
+}
+
+@font-face {
+  font-family: 'MainFont';
+  src: url('../fonts/Poppins.ttf');
+}
